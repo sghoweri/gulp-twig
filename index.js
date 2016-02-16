@@ -43,6 +43,9 @@ module.exports = function (options) {
             },
             template;
 
+        if (file.template){
+          twigOpts.path = file.template
+        }
         if (options.debug !== undefined) {
             twigOpts.debug = options.debug;
         }
